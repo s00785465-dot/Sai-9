@@ -28,13 +28,11 @@ import {
   MemoryCategory,
   MEMORY_CATEGORIES,
 } from './modules/memory';
-import { ChatModule, Conversation } from './modules/chat';
-import { AIModule } from './modules/ai';
-import { SIA_TIMELINE, TimelineVersion } from './modules/timeline';
-import { SiaP2PRoom, P2PConnectionStatus, P2PMessage } from './modules/p2p';
-import { AudioModule } from './modules/audio';
-import { IntroSequence, EndingSequence, StrikeToast } from './modules/ui';
-
+import { StorageModule } from "./storage";
+import { StrikeModule, STRIKE_MILESTONES, getAbsoluteStrikeQuote } from "./strike";
+import { MemoryModule, MEMORY_CATEGORIES } from "./memory";
+import { ChatModule } from "./chat";
+import { AIModule } from "./ai";
 type ActiveSection = 'chat' | 'memory' | 'strike' | 'timeline' | 'room' | 'settings';
 
 export default function App() {
