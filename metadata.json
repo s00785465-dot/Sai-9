@@ -1,0 +1,6 @@
+{
+  "name": "سِيا 9 — النسخة الأخيرة",
+  "description": "سِيا 9 — النسخة الأخيرة. برنامج ذكاء اصطناعي شخصي هادئ وناضج. 9 نسخ، رحلة واحدة، وفصل أخير.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
