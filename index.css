@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+:root {
+  --bg-deep: #080808;
+  --bg-surface: #111111;
+  --bg-elevated: #181818;
+  --bg-subtle: #202020;
+  --border-hairline: rgba(232, 230, 225, 0.08);
+  --border-strong: rgba(232, 230, 225, 0.16);
+  --text-primary: #e8e6e1;
+  --text-secondary: #a3a19d;
+  --text-muted: #6e6b65;
+  --accent-gold: #b8a67e;
+  --accent-gold-subtle: rgba(184, 166, 126, 0.12);
+  --accent-gold-border: rgba(184, 166, 126, 0.28);
+  --user-bubble: #191918;
+  --sia-bubble: #0e0e0e;
+}
+
+[data-theme="light"] {
+  --bg-deep: #f4f2ec;
+  --bg-surface: #eae6dd;
+  --bg-elevated: #e2ddd2;
+  --bg-subtle: #d8d2c5;
+  --border-hairline: rgba(20, 20, 19, 0.09);
+  --border-strong: rgba(20, 20, 19, 0.18);
+  --text-primary: #161514;
+  --text-secondary: #52504c;
+  --text-muted: #7d7972;
+  --accent-gold: #806f4b;
+  --accent-gold-subtle: rgba(128, 111, 75, 0.11);
+  --accent-gold-border: rgba(128, 111, 75, 0.32);
+  --user-bubble: #e4dfd4;
+  --sia-bubble: #efece4;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-deep);
+  color: var(--text-primary);
+  font-family: 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, sans-serif;
+  direction: rtl;
+  overflow-x: hidden;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.font-editorial {
+  font-family: 'Amiri', Georgia, serif;
+}
+
+.font-mono-num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom calm scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 9999px;
+}
+
+/* Subtle animations */
+@keyframes calmFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes calmPulse {
+  0%, 100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+.animate-calm-in {
+  animation: calmFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-calm-pulse {
+  animation: calmPulse 1.8s ease-in-out infinite;
+}
